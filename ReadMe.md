@@ -42,7 +42,7 @@ mvn test
 
 ## Generating Reports
 
-After running the tests, you can generate Cucumber reports. These reports will be available in the `target/Cucumber-Reports` directory. After the workflow actions are completed, the `pages build and deployment` job will run. Under `pages build and deployment`, you can see the report link. Click on the link to view the report. The report is available at: 
+After running the tests, you can generate Cucumber reports. These reports will be available in the `target/Cucumber-Reports` directory. After the workflow actions are completed, the `pages build and deployment` job will run. Under `pages build and deployment`, you can see the report link from index.html
 
 ## Interpreting the Results
 
@@ -62,3 +62,16 @@ Maven generates a detailed test report in the `target/surefire-reports` director
 - Test cases executed
 - Pass/fail status
 - Error messages and stack traces for any failed tests
+## Troubleshooting
+
+If the artifacts are not getting created, ensure the following:
+
+1. The `target` directory exists and contains the necessary report files.
+2. The `actions/upload-artifact@v4` step is correctly configured.
+3. The `peaceiris/actions-gh-pages@v4` step is correctly configured with the correct `publish_dir`.
+
+## Hints
+
+1. Make sure the `pom.xml` dependencies have the required versions.
+2. You can update the IDE version to get the latest updates.
+3. Make sure the GitHub Actions workflow file is correctly configured.
