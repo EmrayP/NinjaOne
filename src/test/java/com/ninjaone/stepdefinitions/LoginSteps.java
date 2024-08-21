@@ -1,7 +1,7 @@
 package com.ninjaone.stepdefinitions;
 
 import com.ninjaone.pages.LoginPage;
-import com.ninjaone.utils.BaseTest;
+import com.ninjaone.utils.Driver;
 import com.ninjaone.utils.Constants;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,15 +15,12 @@ import org.testng.Assert;
  *
  * @author Emray Pala
  */
-public class LoginSteps extends BaseTest {
+public class LoginSteps extends Driver {
 
     private LoginPage loginPage;
 
     @Given("the user is on the NinjaOne login page")
     public void the_user_is_on_the_ninja_one_login_page() {
-        if (driver == null) {
-            setUp(); // Ensure driver is initialized
-        }
         loginPage = new LoginPage(driver);
         driver.get(getBaseUrl());
     }

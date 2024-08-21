@@ -1,5 +1,10 @@
 package com.ninjaone.utils;
 
+/**
+ * This class contains constants used throughout the NinjaOne login page test automation project.
+ * These constants include messages for assertion failures and text values for various elements on the login page.
+ * By centralizing these values, the class promotes reusability and maintainability of the test code.
+ */
 public class Constants {
     public static final String EMAIL_INPUT_NOT_DISPLAYED = "Email input field is not displayed";
     public static final String PASSWORD_INPUT_NOT_DISPLAYED = "Password input field is not displayed";

@@ -5,6 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * This class represents the LoginPage and contains WebElements and methods to interact with the login page of the NinjaOne application.
+ * It uses the Page Object Model (POM) design pattern to encapsulate the elements and actions on the login page.
+ * The class is initialized with a WebDriver instance and uses the PageFactory to locate elements.
+ * It provides methods to verify the presence of various elements on the login page.
+ */
 public class LoginPage {
     WebDriver driver;
 
