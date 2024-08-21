@@ -36,7 +36,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean verify -Dtestng.dtd.http=true
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ SECRET_NINJA }}
 
       - name: Run Cucumber Tests
         run: mvn test -Dcucumber.options="--plugin json:target/cucumber.json --plugin html:target/cucumber-html-report"
@@ -47,7 +47,7 @@ jobs:
       - name: Deploy report page to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.PAT }}
+          github_token: ${{ SECRET_NINJA }}
           publish_dir: ./target/Cucumber-Reports
           keep_files: true
           user_name: EmrayP
