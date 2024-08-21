@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.NINJAONE }}
 
       - name: Run Cucumber Tests
-        run: mvn test -Dcucumber.options="--plugin json:target/cucumber.json --plugin html:target/cucumber-html-report"
+        run: mvn test -Dcucumber.options="--plugin json:target/cucumber.json --plugin html:target/index.html"
         env:
           GITHUB_TOKEN: ${{ secrets.NINJAONE }}
 
